@@ -24,9 +24,7 @@ parser.add_argument('--output_dir',default='./',type=str)
 args = parser.parse_args()
 
 
-assert (
-    "LlamaTokenizer" in transformers._import_structure["models.llama"]
-), "LLaMA is now in HuggingFace's main branch.\nPlease reinstall it: pip uninstall transformers && pip install git+https://github.com/huggingface/transformers.git"
+
 from transformers import LlamaTokenizer, LlamaForCausalLM
 
 BASE_MODEL = args.base_model
